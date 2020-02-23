@@ -39,6 +39,7 @@ $("#state").on("change", function(){
        dataType: "json",
        data: { "state": $("#state").val() },
        success: function(result, status){
+           $("#county").html("");
            $("#county").append("<option value=''>Select County</option>");
            for ( let i = 0; i < result.length; i ++ ){
                var county = result[i].county.split(' ')[0];
