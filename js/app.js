@@ -1,5 +1,16 @@
 console.log("hello");
 
+$.ajax({
+    method: "GET",
+    url: "https://itcdland.csumb.edu/~milara/ajax/states.php/",
+    dataType: "json",
+    success: function(result, status){
+        $("#state").append("<option value=''>Select One</option>")
+        for ( let i = 0; i < result.length; i ++ ){
+            $("#state").append("<option value='"+result[i].state+"'>"+result[i].state+"</option>");
+        }
+    }
+})
 $("#zip").on("change", function(){
     if ( $("#zip").val() === "" ){
         $("#city").html("");
@@ -74,6 +85,12 @@ function formIsValid(){
     
     if ( $("#password").val().length == 0 ){
         $("#passwordFeedback").html("Password is required");
+        $("#passwordFeedback").css("color", "red");
+        valid = false;
+    }
+    
+    if ( $("#password").val().length < 6 ){
+        $("#passwordFeedback").html("Password is not strong enough");
         $("#passwordFeedback").css("color", "red");
         valid = false;
     }
