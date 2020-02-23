@@ -65,11 +65,6 @@ $("#username").on("change", function(){
     });
 });
 
-var passwordIsBad;
-$("#password").on("change", function(){
-     
-});
-
 $("#signupForm").on("submit", function(event){
     if ( !formIsValid() ){
         event.preventDefault();
@@ -78,6 +73,7 @@ $("#signupForm").on("submit", function(event){
 
 function formIsValid(){
     var valid = true;
+    $("#username").change();
     if ( !usernameAvailable ) {
         valid = false;
     }
