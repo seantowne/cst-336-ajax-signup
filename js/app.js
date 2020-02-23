@@ -76,13 +76,13 @@ function formIsValid(){
         valid = false;
     }
     
-    if ( $("#passwordConfirm").val().length == 0 ){
+    if ( $("#confirmPassword").val().length == 0 ){
         $("#passwordConfirmFeedback").html("Password confirmation is required");
         $("#passwordConfirmFeedback").css("color", "red");
         valid = false;
     }
     
-     if ( $("#passwordConfirm").val() !== $("#password").val() ){
+     if ( $("#confirmPassword").val() !== $("#password").val() ){
         $("#passwordConfirmFeedback").html("Passwords do not match");
         $("#passwordConfirmFeedback").css("color", "red");
         valid = false;
