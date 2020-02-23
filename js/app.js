@@ -8,6 +8,9 @@ $("#zip").on("change", function(){
         data: { "zip" : $("#zip").val()},
         success: function(result, status){
             alert(result);
+            for ( var item in result ){
+                console.log(item);
+            }
         }
     });
 });
