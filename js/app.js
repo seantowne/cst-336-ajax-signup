@@ -28,7 +28,7 @@ $("#state").on("change", function(){
        data: { "state": $("#state").val() },
        success: function(result, status){
            for ( var c in result ){
-               $("#county").append("<option value='"+c.county+"' name='countyOptions'>" + c.county + "<option>");
+               $("#county").append("<option value='"+c.county+"' name='countyOptions'>" + c.county + "</option>");
            }
        },
     });
