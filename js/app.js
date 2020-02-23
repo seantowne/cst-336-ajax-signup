@@ -27,10 +27,12 @@ $("#state").on("change", function(){
        dataType: "json",
        data: { "state": $("#state").val() },
        success: function(result, status){
-           alert(result);
+           for ( var c in result ){
+               $("#county").append("<option value='"+c.county+"' name='countyOptions'>" + c.county + "<option>");
+           }
        },
-       error: function(status, error){
-           console.log("could not load resource");
-       } 
     });
 });
+
+
+$("#c")
