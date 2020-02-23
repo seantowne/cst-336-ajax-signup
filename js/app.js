@@ -94,6 +94,9 @@ function formIsValid(){
         $("#passwordFeedback").css("color", "red");
         valid = false;
     }
+    else{
+         $("#passwordFeedback").html("");
+    }
     
     if ( $("#confirmPassword").val().length == 0 ){
         $("#passwordConfirmFeedback").html("Password confirmation is required");
