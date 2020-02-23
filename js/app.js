@@ -45,7 +45,9 @@ $("#username").on("change", function(){
         dataType: "json",
         data: { "username" : $("#username").val() },
         success: function(result, status){
-            $("#usernameAvailability").html(result.available);
+            (isMember ? '$2.00' : '$10.00');
+            var availability = (result.available ? ' Available':'Unavailable');
+            $("#usernameAvailability").html(availability);
         }
     });
 });
