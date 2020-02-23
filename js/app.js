@@ -58,8 +58,10 @@ $("#username").on("change", function(){
         success: function(result, status){
             var availability = (result.available ? ' Available':' Unavailable');
             var color = (result.available ? 'text-success':'text-danger');
+            var notColor = (!result.available ? 'text-success':'text-danger');
             usernameAvailable = result.available;
             $("#usernameAvailability").html(availability);
+            $("#usernameAvailability").removeClass(notColor);
             $("#usernameAvailability").addClass(color);
         }
     });
