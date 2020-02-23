@@ -5,7 +5,7 @@ $.ajax({
     url: "https://itcdland.csumb.edu/~milara/ajax/states.php/",
     dataType: "json",
     success: function(result, status){
-        $("#state").append("<option value=''>Select One</option>")
+        $("#state").append("<option value=''>Select State</option>")
         for ( let i = 0; i < result.length; i ++ ){
             $("#state").append("<option value='"+result[i].state+"'>"+result[i].state+"</option>");
         }
