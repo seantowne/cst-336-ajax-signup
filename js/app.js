@@ -57,10 +57,10 @@ $("#username").on("change", function(){
         data: { "username" : $("#username").val() },
         success: function(result, status){
             var availability = (result.available ? ' Available':' Unavailable');
-            var color = (result.available ? 'green':'red');
+            var color = (result.available ? 'text-success':'text-danger');
             usernameAvailable = result.available;
             $("#usernameAvailability").html(availability);
-            $("#usernameAvailability").addClass("text-danger");
+            $("#usernameAvailability").addClass(color);
         }
     });
 });
