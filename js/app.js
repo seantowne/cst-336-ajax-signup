@@ -30,7 +30,9 @@ $("#state").on("change", function(){
        success: function(result, status){
            r = result;
            for ( let i = 0; i < result.length; i ++ ){
-               $("#county").append("<option value='"+result[i].county+"'>" + result[i].county + "</option>");
+               county = result[i].county.split(' ')[0];
+               $("#county").append("<option value=''>Select County</option>");
+               $("#county").append("<option value='"+county+"'>" + county + "</option>");
            }
        },
     });
