@@ -23,7 +23,7 @@ $("#zip").on("change", function(){
 $("state").on("change", function(){
     $.ajax({
        method: "GET",
-       url: "https://cst336.herokuapp.com/projects/api/countyListAPI.php?state=ca",
+       url: "https://itcdland.csumb.edu/~milara/ajax/countyList.php?",
        dataType: "json",
        data: { "state": $("#state").val() },
        success: function(result, status){
