@@ -38,4 +38,14 @@ $("#state").on("change", function(){
 });
 
 
-$("#c")
+$("#username").on("change", function(){
+    $.ajax({
+        method: "GET",
+        url: "https://cst336.herokuapp.com/projects/api/usernamesAPI.php?",
+        dataType: "json",
+        data: { "username" : $("#username").val() },
+        success: function(result, status){
+            alert(result)
+        }
+    });
+});
