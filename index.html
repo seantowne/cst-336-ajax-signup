@@ -4,34 +4,38 @@
         <title>Ajax Sign Up</title>
         <meta charset="UTF-8">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
         <h1>Sign Up</h1>
         <form id="signupForm" method="post" action="welcome.html">
-            First Name: <input type="text" name="fname"><br>
-            Last Name: <input type="text" name="lname"><br>
-            Sex: <input type="radio" name="gender" value="m"> Male
-            <input type="radio" name="gender" value="f"> Female <br><br>
+            <div class="form-group">
+                <label for="fname">First Name</label><input type="text" name="fname"><br>
+                <label for="lname">Last Name</label><input type="text" name="lname"><br>
+                <label for="sex=male">Male</label><input type="radio" name="gender" value="m" id="sex-male">
+                <label for="sex-female">Female</label><input type="radio" name="gender" value="f" id="sex-female"><br><br>
+            </div>
             
-            Zip Code: <input tpye="text" name="zip" id="zip"><br>
-            City: <span id="city"><br></span><br>
-            Latitude: <span id="latitude"><br></span><br>
-            Longitude: <span id="longitude"><br></span><br><br>
+            <div class="form-group">
+                <label for="zip">Zip Code</label><input tpye="text" name="zip" id="zip"><br>
+                <label for="city">City</label><span id="city"><br></span><br>
+                <label for="latitude">Latitude</label><span id="latitude"><br></span><br>
+                <label for="longitude">Longitude</label><span id="longitude"><br></span><br><br>
+            </div>
             
-            State:
-            <select id="state" name="state">
-                <option value="">Select One</option>
-                <option value="ca">California</option>
-                <option value="ny">New York</option>
-                <option value="tx">Texas</option>
-            </select><br>
+            <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" name="state">
+                </select><br>
+                <label for="county">Select a County</label><select id="county"></select><br><br>
+            </div>
             
-            Select a County: <select id="county"></select><br><br>
-            
-            Desired Username: <input type="text" id="username" name="username"><span id="usernameAvailability"></span><br>
-            Password: <input type="password" id="password" name="password"><span id="passwordFeedback"></span><br>
-            Confirm Password: <input type="password" id="confirmPassword"><span id="passwordConfirmFeedback"></span><br>
+            <div class="form-group">
+                <label for="username">Username</label><input type="text" id="username" name="username"><span id="usernameAvailability"></span><br>
+                <label for="password">Password</label><input type="password" id="password" name="password"><span id="passwordFeedback"></span><br>
+                <label for="confirmPassword">Confirm Password</label><input type="password" id="confirmPassword"><span id="passwordConfirmFeedback"></span><br><br>
+                <input type="submit" value="Sign Up!"><br>
+            </div>
             
             <input type="submit" value="Sign Up!"><br>
         </form>
