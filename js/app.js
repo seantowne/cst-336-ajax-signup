@@ -20,6 +20,7 @@ $("#zip").on("change", function(){
     });
 });
 
+var r;
 $("#state").on("change", function(){
     $.ajax({
        method: "GET",
@@ -27,6 +28,7 @@ $("#state").on("change", function(){
        dataType: "json",
        data: { "state": $("#state").val() },
        success: function(result, status){
+           r = result;
            for ( var c in result ){
                $("#county").append("<option value='"+c.county+"'>" + c.county + "</option>");
            }
