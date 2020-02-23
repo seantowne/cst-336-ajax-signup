@@ -20,7 +20,9 @@ $("#zip").on("change", function(){
     }
     if ( parseInt($("#zip").val()) == NaN ){
         $("#zip").html("");
+        return;
     }
+    
     $.ajax({
         method: "GET",
         url: "https://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
