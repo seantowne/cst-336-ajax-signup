@@ -28,6 +28,9 @@ $("state").on("change", function(){
        data: { "state": $("#state").val() },
        success: function(result, status){
            alert(result);
-       }
+       },
+       error: function(status, error){
+           console.log("could not load resource");
+       } 
     });
 });
