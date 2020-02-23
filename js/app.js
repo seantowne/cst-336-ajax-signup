@@ -74,7 +74,7 @@ function formIsValid(){
     
     if ( $("#password").val().length == 0 ){
         $("#passwordFeedback").html("Password is required");
-        $("#password").css("color", "red");
+        $("#passwordFeedback").css("color", "red");
         valid = false;
     }
     
@@ -88,6 +88,9 @@ function formIsValid(){
         $("#passwordConfirmFeedback").html("Passwords do not match");
         $("#passwordConfirmFeedback").css("color", "red");
         valid = false;
+    }
+    else{
+        $("#passwordConfirmFeedback").html("");
     }
     return valid;
 }
