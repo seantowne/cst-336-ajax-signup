@@ -73,7 +73,7 @@ $("#signupForm").on("submit", function(event){
 
 function formIsValid(){
     var valid = true;
-    $("#username").change(function(){ alert("changed");});
+    $("#username").change(function(){});
     if ( !usernameAvailable ) {
         valid = false;
     }
