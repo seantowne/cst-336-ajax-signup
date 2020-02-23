@@ -1,7 +1,12 @@
 console.log("hello");
 
 $("#zip").on("change", function(){
-    if ( $("#zip").val() === "" )return;
+    if ( $("#zip").val() === "" ){
+        $("#city").html("");
+        $("#latitude").html("");
+        $("#longitude").html("");
+        return;
+    }
     $.ajax({
         method: "GET",
         url: "https://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
@@ -12,5 +17,17 @@ $("#zip").on("change", function(){
             $("#latitude").html(result.latitude);
             $("#longitude").html(result.longitude);
         }
+    });
+});
+
+$("state").on("change", function(){
+    $.ajax({
+       method: "GET",
+       url: "https://cst336.herokuapp.com/projects/api/countyListAPI.php?state=ca",
+       dataType: "json",
+       data: { "state": $("#state").val() },
+       success: function(result, status){
+           
+       }
     });
 });
