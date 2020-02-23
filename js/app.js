@@ -27,7 +27,7 @@ $("state").on("change", function(){
        dataType: "json",
        data: { "state": $("#state").val() },
        success: function(result, status){
-           
+           alert(result);
        }
     });
 });
