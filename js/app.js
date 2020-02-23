@@ -7,10 +7,7 @@ $("#zip").on("change", function(){
         dataType: "json",
         data: { "zip" : $("#zip").val()},
         success: function(result, status){
-            alert(result);
-            for ( var item in result ){
-                console.log(item);
-            }
+            $("#city").html(result.city)
         }
     });
 });
