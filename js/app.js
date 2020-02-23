@@ -27,6 +27,12 @@ $("#zip").on("change", function(){
             $("#city").html(result.city);
             $("#latitude").html(result.latitude);
             $("#longitude").html(result.longitude);
+            if ( !result || result.length == 0 ){
+                $("#zipCodeNotFound").html("Zip Code Not Found");
+            }
+            else{
+                $("#zipCodeNotFound").html("");
+            }
         }
     });
 });
