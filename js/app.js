@@ -1,6 +1,7 @@
 console.log("hello");
 
 $("#zip").on("change", function(){
+    if ( $("#zip").val() === "" )return;
     $.ajax({
         method: "GET",
         url: "https://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
