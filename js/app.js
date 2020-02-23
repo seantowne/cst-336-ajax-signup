@@ -18,6 +18,9 @@ $("#zip").on("change", function(){
         $("#longitude").html("");
         return;
     }
+    if ( parstInt($("#zip").val()) == NaN ){
+        $("#zip").html("");
+    }
     $.ajax({
         method: "GET",
         url: "https://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
