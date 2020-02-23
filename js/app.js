@@ -45,9 +45,10 @@ $("#username").on("change", function(){
         dataType: "json",
         data: { "username" : $("#username").val() },
         success: function(result, status){
-            
-            var availability = (result.available ? ' Available':'Unavailable');
+            var availability = (result.available ? ' Available':' Unavailable');
+            var color = (result.available ? 'green':'red');
             $("#usernameAvailability").html(availability);
+            $("#usernameAvailability").css("color", color);
         }
     });
 });
