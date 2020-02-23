@@ -61,29 +61,31 @@ $("#signupForm").on("submit", function(event){
 });
 
 function formIsValid(){
-    if ( !usernameAvailable ) return false;
+    var valid = true;
+    if ( !usernameAvailable ) valid = false;
     
     if ( $("#username").val().length == 0 ){
         $("#usernameAvailability").html("Username is required");
         $("#usernameAvailability").css("color", "red");
-        return false;
+        valid = false;
     }
     
     if ( $("#password").val().length == 0 ){
         $("#passwordFeedback").html("Password is required");
         $("#password").css("color", "red");
-        return false;
+        valid = false;
     }
     
     if ( $("#passwordConfirm").val().length == 0 ){
         $("#passwordConfirmFeedback").html("Password confirmation is required");
         $("#passwordConfirmFeedback").css("color", "red");
-        return false;
+        valid = false;
     }
     
      if ( $("#passwordConfirm").val() !== $("#password").val() ){
         $("#passwordConfirmFeedback").html("Passwords do not match");
         $("#passwordConfirmFeedback").css("color", "red");
-        return false;
+        valid = false;
     }
+    return valid;
 }
