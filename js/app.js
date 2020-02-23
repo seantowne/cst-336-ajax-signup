@@ -7,7 +7,7 @@ $.ajax({
     success: function(result, status){
         $("#state").append("<option value=''>Select State</option>")
         for ( let i = 0; i < result.length; i ++ ){
-            $("#state").append("<option value='"+result[i].state+"'>"+result[i].state+"</option>");
+            $("#state").append("<option value='"+result[i].usps+"'>"+result[i].state+"</option>");
         }
     }
 })
