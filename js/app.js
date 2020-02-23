@@ -20,7 +20,7 @@ $("#zip").on("change", function(){
     });
 });
 
-$("state").on("change", function(){
+$("#state").on("change", function(){
     $.ajax({
        method: "GET",
        url: "https://itcdland.csumb.edu/~milara/ajax/countyList.php?",
