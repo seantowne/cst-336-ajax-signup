@@ -60,7 +60,7 @@ $("#username").on("change", function(){
             var color = (result.available ? 'green':'red');
             usernameAvailable = result.available;
             $("#usernameAvailability").html(availability);
-            $("#usernameAvailability").css("color", color);
+            $("#usernameAvailability").addClass("text-danger");
         }
     });
 });
