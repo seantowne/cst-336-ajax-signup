@@ -47,7 +47,7 @@ $("#username").on("change", function(){
         success: function(result, status){
             var availability = (result.available ? ' Available':' Unavailable');
             var color = (result.available ? 'green':'red');
-            usernameAvailable = availability;
+            usernameAvailable = result.available;
             $("#usernameAvailability").html(availability);
             $("#usernameAvailability").css("color", color);
         }
@@ -62,7 +62,9 @@ $("#signupForm").on("submit", function(event){
 
 function formIsValid(){
     var valid = true;
-    if ( !usernameAvailable ) valid = false;
+    if ( !usernameAvailable ) {
+        valid = false;
+    }
     
     if ( $("#username").val().length == 0 ){
         $("#usernameAvailability").html("Username is required");
