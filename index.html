@@ -5,77 +5,85 @@
         <meta charset="UTF-8">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            #signin-container{
+                disply: block;
+                width: 600;
+                margin: auto;
+            }
+        </style>
     </head>
     <body>
         
         
+        <div id="signin-container">
+            <br><br><h1 class="jumbotron">Sign Up</h1><br>
         
-        <br><br><h1>Sign Up</h1><br>
-        
-        <form id="signupForm" method="post" action="welcome.html">
-            <div class="row form-group">
-                <div class="col">
-                <input type="text" class="form-control" placeholder="First name">
+            <form id="signupForm" method="post" action="welcome.html">
+                <div class="row form-group">
+                    <div class="col">
+                    <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name">
+                    </div>
                 </div>
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Last name">
+                
+                <div class="row form-group">
+                    <div class="col">
+                        <input class="form-control" type=text id="username" name="username" placeholder="Username">
+                        <small id="usernameAvailability" class="form-text text-muted">small text</small>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" id="password" name="password" placeholder="Password">
+                        <small id="passwordFeedback" class="form-text text-muted">small text</small>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="row form-group">
-                <div class="col">
-                    <input class="form-control" type=text id="username" name="username" placeholder="Username">
-                    <small id="usernameAvailability" class="form-text text-muted">small text</small>
+                
+                <div class="row form-group">
+                    <div class="col">
+                        <input class="form-control" type="password" id="confirmPassword" placeholder="Confirm Password">
+                        <small id="passwordConfirmFeedback" class="form-text text-muted">small text</small>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="state" name="state"></select>
+                    </div>
                 </div>
-                <div class="col">
-                    <input class="form-control" id="password" name="password" placeholder="Password">
-                    <small id="passwordFeedback" class="form-text text-muted">small text</small>
+                
+                <div class="row form-group">
+                    <div class="col">
+                        <select id="county" class="form-control"></select>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="row form-group">
-                <div class="col">
-                    <input class="form-control" type="password" id="confirmPassword" placeholder="Confirm Password">
-                    <small id="passwordConfirmFeedback" class="form-text text-muted">small text</small>
+                
+                <div class="row form-group">
+                    <div class="col">
+                        <input class="form-control" tpye="text" name="zip" id="zip" placeholder="Zip Code">
+                    </div>
+                    <div class="col">
+                        <label class="form-control" for="city">City: <span id="city">test val</span></label>
+                    </div>
+                    <div class="col">
+                        <label class="form-control" for="latitude">Latitude: <span id="latitude">test val</span></label>
+                    </div>
+                    <div class="col">
+                        <label class="form-control" for="longitude">Latitude: <span id="longitude">test val</span></label>
+                    </div>
                 </div>
-                <div class="col">
-                    <select class="form-control" id="state" name="state"></select>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-control" for="sex-male">Male <input type="radio" name="gender" value="m" id="sex-male"></label>
+                    </div>
+                    <div class="col-4">
+                        <label class="form-control" for="sex-female">Female <input type="radio" name="gender" value="f" id="sex-female"></label>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up!</button>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="row form-group">
-                <div class="col">
-                    <select id="county" class="form-control"></select>
-                </div>
-            </div>
-            
-            <div class="row form-group">
-                <div class="col">
-                    <input class="form-control" tpye="text" name="zip" id="zip" placeholder="Zip Code">
-                </div>
-                <div class="col">
-                    <label class="form-control" for="city">City: <span id="city">test val</span></label>
-                </div>
-                <div class="col">
-                    <label class="form-control" for="latitude">Latitude: <span id="latitude">test val</span></label>
-                </div>
-                <div class="col">
-                    <label class="form-control" for="longitude">Latitude: <span id="longitude">test val</span></label>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-4">
-                    <label class="form-control" for="sex-male">Male <input type="radio" name="gender" value="m" id="sex-male"></label>
-                </div>
-                <div class="col-4">
-                    <label class="form-control" for="sex-female">Female <input type="radio" name="gender" value="f" id="sex-female"></label>
-                </div>
-                <div class="col-4">
-                    <button type="submit" class="btn btn-primary btn-block">Sign Up!</button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
         
         
         
