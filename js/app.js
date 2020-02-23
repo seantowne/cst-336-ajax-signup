@@ -7,7 +7,7 @@ $("#zip").on("change", function(){
         dataType: "json",
         data: { "zip" : $("#zip").val()},
         success: function(result, status){
-            alert("wtf");
+            alert(result);
         }
     });
 });
