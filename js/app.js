@@ -18,7 +18,7 @@ $("#zip").on("change", function(){
         $("#longitude").html("");
         return;
     }
-    if ( parseInt($("#zip").val()) == NaN ){
+    if ( isNaN(parseInt($("#zip").val())) ){
         $("#zip").html("");
         return;
     }
