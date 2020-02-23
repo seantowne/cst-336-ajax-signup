@@ -45,7 +45,7 @@ $("#username").on("change", function(){
         dataType: "json",
         data: { "username" : $("#username").val() },
         success: function(result, status){
-            alert(result)
+            $("#usernameAvailability").html(result.available);
         }
     });
 });
